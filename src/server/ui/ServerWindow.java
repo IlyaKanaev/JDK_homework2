@@ -1,14 +1,14 @@
 package server.ui;
 
 import server.domain.ServerController;
-import server.repository.FileStorage;
+// import server.repository.FileStorage;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import server.domain.ServerController;
+// import server.domain.ServerController;
 
 public class ServerWindow extends JFrame implements ServerView {
     public static final int WIDTH = 400;
@@ -61,12 +61,7 @@ public class ServerWindow extends JFrame implements ServerView {
             }
         });
 
-        btnStop.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                serverController.stop();
-            }
-        });
+        btnStop.addActionListener(e -> serverController.stop()); // тут аналогичное, но с лямбдой
 
         panel.add(btnStart);
         panel.add(btnStop);

@@ -6,6 +6,7 @@ import server.ui.ServerWindow;
 
 public class Main {
     public static void main(String[] args) {
+        // тут все просто. Создаются три объекта - три окошка
         ServerController serverController = new ServerController(new ServerWindow(), new FileStorage());
 
         new ClientController(new ClientGUI(), serverController);
